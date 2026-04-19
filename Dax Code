@@ -1,0 +1,21 @@
+KPI Build dax Code:
+Policies Opened = [Policy Count]
+Dummy series = 0
+
+Total Premium = SUM(Policies[PREMIUM])
+
+Total Claims = SUM(Policies[CLAIM_PAID])
+
+PREMIUM TO CLAIM RATIO = DIVIDE([Total Premium],[Total Claims])
+
+Average Premium = AVERAGE(Policies[PREMIUM])
+
+Average Claim 2 = DIVIDE([Total Claims],[Policies Opened])
+
+Total Claims = SUM(Policies[CLAIM_PAID])
+Policies closed = CALCULATE([Policy Count],USERELATIONSHIP('calendar'[Date],Policies[INSR_END]))
+Tooltip Header = 
+var v_type = SELECTEDVALUE(Policies[TYPE_VEHICLE])
+VAR v_make = SELECTEDVALUE(Policies[MAKE])
+RETURN
+v_type & " _ " & v_make
