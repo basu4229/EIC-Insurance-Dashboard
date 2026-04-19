@@ -1,4 +1,4 @@
-# EIC-Insurance-Dashboard
+# EIC-Vehicle -Insurance Dashboard
 This Power BI dashboard provides a comprehensive analysis of insurance policy performance, premium collection, and claims distribution from 2014 to 2018. It is designed to identify high-value segments, claim trends, and overall profitability.
 
 Key Performance Indicators (KPIs):
